@@ -1080,7 +1080,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _src: {fileID: 8210040}
-  _l1: {fileID: 0}
 --- !u!114 &11424648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1142,6 +1141,7 @@ MonoBehaviour:
   _camera: {fileID: 100006}
   _lcamera: {fileID: 100002}
   _rcamera: {fileID: 100000}
+  health: 5
 --- !u!114 &11483992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1222,6 +1222,7 @@ MonoBehaviour:
   rightCamera: {fileID: 2000000}
   crossHairScaleFactor: 50
   adjustmentFactor: 5
+  _explosionInstance: {fileID: 100004, guid: 169b10ce10f4327cb9f40f6b117ed8d7, type: 2}
   spawnPoints:
   - {fileID: 170098}
   - {fileID: 148462}

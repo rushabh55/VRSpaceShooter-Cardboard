@@ -21,6 +21,8 @@ public class Bullet : MonoBehaviour {
     public int crossHairScaleFactor;
 
     public int adjustmentFactor = 1;
+
+    public GameObject _explosionInstance;
     
 //    public GameObject _scouterTex = null;
     public GameObject[] spawnPoints = null;
@@ -45,6 +47,7 @@ public class Bullet : MonoBehaviour {
 	void Update () {
         if ( prevTime + cooldown <= Time.time  )
         {
+            var temp = GameObject.FindGameObjectWithTag("MissileTempObjectCollection");
             foreach (var pt in spawnPoints)
             {
                 if (bullet != null && pt != null )
@@ -59,16 +62,25 @@ public class Bullet : MonoBehaviour {
                     else
                     {
                         simpleAcc.velocity = leftCamera.transform.forward;
-                        simpleAcc.speed = 10;
+                        simpleAcc.speed = 25;
                     }
 
-
-                    GameObject.Destroy(Bullet, 5f);
+                    Bullet.transform.parent = temp.transform;
+                    GameObject.Destroy(Bullet, 10f);
+                    StartCoroutine(CreateExplosionInstance(Bullet));
                 }
             }
             prevTime = Time.time;
         }
 	}
+
+    private IEnumerator CreateExplosionInstance(GameObject obj)
+    {
+        yield return new WaitForSeconds(9.9f);
+        GameObject.Destroy((GameObject)GameObject.Instantiate(_explosionInstance, obj.transform.position, Quaternion.identity), 2);
+  
+
+    }
 
     void OnGUI()
     {

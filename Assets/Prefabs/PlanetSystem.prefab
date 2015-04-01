@@ -396,7 +396,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164802}
-  m_LocalRotation: {x: 0, y: .922866344, z: 0, w: .385120422}
+  m_LocalRotation: {x: -.198302537, y: .933273494, z: .0622400306, w: -.292921335}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_Children: []
@@ -420,7 +420,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178376}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: .0328104943, y: .397934318, z: .0753385946, w: .913726389}
   m_LocalPosition: {x: 26503, y: 5160, z: 9366}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -934,6 +934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _starPrefab: {fileID: 138712, guid: c89455ec95bd744408c1cf395885557a, type: 2}
   maxStars: 50
+  TempObjectCore: {fileID: 0}
 --- !u!123 &12310058
 LensFlare:
   m_ObjectHideFlags: 1

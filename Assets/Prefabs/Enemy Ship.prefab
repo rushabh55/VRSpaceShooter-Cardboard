@@ -206,7 +206,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45819.875, y: 47825.1328, z: -290529.281}
+  m_LocalPosition: {x: 5637.13281, y: 2982.29199, z: 4660.93115}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children:
   - {fileID: 451766}
@@ -370,7 +370,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 96
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &6599922
 BoxCollider:
@@ -382,7 +382,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 25, y: 3.18000007, z: 23}
+  m_Size: {x: 35, y: 5, z: 30}
   m_Center: {x: 0, y: -.100000001, z: -.769999981}
 --- !u!102 &10253508
 TextMesh:
@@ -457,6 +457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 106008, guid: e0b7dc09949b5804ea3aae01a91a8bf6, type: 2}
   _player: {fileID: 0}
+  TempObject: {fileID: 0}
 --- !u!114 &11458686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -470,6 +471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 106008, guid: e0b7dc09949b5804ea3aae01a91a8bf6, type: 2}
   _player: {fileID: 0}
+  TempObject: {fileID: 0}
 --- !u!136 &13603910
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour {
     public int count = 100;
     public int range = 1000;
     public GameObject _player = null;
+    public GameObject TempGameObject = null;
 	void Start () {
 	    for(int i = 0; i < count; i++)
         {
@@ -24,7 +25,7 @@ public class EnemySpawner : MonoBehaviour {
                 var diff = _player.transform.position - enemy.transform.position;
                 var simpleAcc = enemy.AddComponent<SimpleAcceleration>();
                 simpleAcc.velocity = diff;
-                simpleAcc.speed = (float)r.NextDouble() + 1;
+                simpleAcc.speed = (float)r.NextDouble() + 10;
                 simpleAcc._target = _player.transform.position;
                 var playerInfo = enemy.GetComponent<GetPlayerInfo>();
                 //var spriteRenderer = playerInfo._playerDP.GetComponent<SpriteRenderer>();
@@ -32,6 +33,7 @@ public class EnemySpawner : MonoBehaviour {
                 if ( MenuController._friendData.Count > i )
                     text.text
                         = MenuController._friendData[i].name;
+                enemy.transform.parent = TempGameObject.transform;
                 // StartCoroutine(LoadTex(spriteRenderer, i, enemy));                
             }
         }
